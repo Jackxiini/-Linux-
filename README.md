@@ -1,14 +1,14 @@
-## 1
+### 1
 在Server服务器上，进入当前用户根目录下的隐藏目录 .ssh，命令如下：
 ```
 cd ~/.ssh
 ```
-## 2
+### 2
 生成私钥和公钥
 ```
 ssh-keygen -t rsa
 ```
-## 3
+### 3
 加载私钥文件
 ```
 ssh-add id_rsa
@@ -20,14 +20,14 @@ ssh-add id_rsa
 ```
 ssh-agent bash
 ```
-## 4 
+### 4 
 把公钥拷贝至Client服务器上
 ```
 scp id_rsa.pub user@10.xx.xx.xx:xxx
 ```
-## 5
+### 5
 ssh登录到Client服务器上，然后在Client服务器上，把公钥的内容追加到authorized_keys文件末尾
 ```
 cat id_rsa.pub >> ~/.ssh/authorized_keys
 ```
-完成！
+### 完成！
